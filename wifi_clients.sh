@@ -73,7 +73,7 @@ for mac in $wificlients
 do
     let num++
     echo $num". "$(func_mactoname $mac)
-    MSG=$MSG$num". "$(func_mactoname $mac)"%0A"
+    MSG=$MSG$(echo $num". "$(func_mactoname $mac)"%0A")
 done
 fi
     echo -e $wificlients > $FILE  	# Запись списка мак адресов в файл
